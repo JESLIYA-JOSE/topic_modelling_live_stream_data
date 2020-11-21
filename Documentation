@@ -1,0 +1,9 @@
+Topic modeling of live stream data.
+Steps
+-> The stream data was extracted with "m3u8" library which is designed for parsing data in HLS format. The small video chunks are downloaded and they are converted into audio files  with the help of a library known as "moviepy" . Then google's speech recognition lirary is used to convert the audio file into text format.
+-> The topic modeling is done with a dataset containing news headlines and their summary. The data is first tokenized and converted into vector format. Then the LDA method is applied where the no. of topics were set as 10. The model is saved as a pickle file. It is loaded for testing.The extracted text from video data was then passed and the topic is extracted from that.
+-> performance is measure using Log Likelihood and Perplexity
+Log Likelihood:  -951983.9611449474
+Perplexity:  597.5535666157316(training with 3 iteration)
+Log Likelihood:  -947739.8020451159
+Perplexity:  580.7632528805296(100 iteration)
